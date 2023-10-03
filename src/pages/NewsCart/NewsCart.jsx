@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const NewsCart = ({ news }) => {
   const { title, image_url, details, _id } = news || {};
@@ -32,5 +33,7 @@ const NewsCart = ({ news }) => {
     </div>
   );
 };
-
+NewsCart.propTypes = {
+  news: PropTypes.object.isRequired,
+};
 export default NewsCart;
